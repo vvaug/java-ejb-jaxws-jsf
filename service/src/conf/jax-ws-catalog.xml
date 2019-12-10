@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://ppwsp63-n:8080/ShoppingWS/ShoppingWS?wsdl" uri="wsdl/ppwsp63-n_8080/ShoppingWS/ShoppingWS.wsdl"/>
+    <system systemId="http://ppwsp63-n:8080/ShoppingWS/ShoppingWS?xsd=1" uri="wsdl/ppwsp63-n_8080/ShoppingWS/ShoppingWS.xsd_1.xsd"/>
+</catalog>

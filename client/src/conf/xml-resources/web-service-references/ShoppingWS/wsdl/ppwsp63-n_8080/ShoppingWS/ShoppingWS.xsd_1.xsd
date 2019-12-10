@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.shopping.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.shopping.com.br/">
+
+<xs:element name="cartItens" type="tns:cartItens"/>
+
+<xs:element name="deleteItem" type="tns:deleteItem"/>
+
+<xs:element name="deleteItemResponse" type="tns:deleteItemResponse"/>
+
+<xs:element name="getCart" type="tns:getCart"/>
+
+<xs:element name="itemException" nillable="true" type="tns:faultInfo"/>
+
+<xs:element name="newItem" type="tns:newItem"/>
+
+<xs:element name="newItemResponse" type="tns:newItemResponse"/>
+
+<xs:complexType name="deleteItem">
+<xs:sequence>
+<xs:element name="itemCod" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteItemResponse">
+<xs:sequence>
+<xs:element name="deletedItem" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="faultInfo">
+<xs:sequence>
+<xs:element name="codErr" type="xs:string" minOccurs="0"/>
+<xs:element name="descErr" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newItem">
+<xs:sequence>
+<xs:element name="item" type="tns:item" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="item">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="quantity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newItemResponse">
+<xs:sequence>
+<xs:element name="newestItem" type="tns:item" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCart">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cartItens">
+<xs:sequence>
+<xs:element name="itens" type="tns:item" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
